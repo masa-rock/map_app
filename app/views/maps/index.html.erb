@@ -1,2 +1,10 @@
-<h1>Maps#index</h1>
-<p>Find me in app/views/maps/index.html.erb</p>
+<section class="top-container-img">
+  <% @post.each do |post| %>
+    <div class="map_items">
+      <%= post.name %>
+      <%= post.tag_ids %>
+    </div>
+  <% end %>
+  <%= link_to '新規登録', new_page_path %>
+  <%= link_to '一覧ページ', maps_index_path %>
+</section>
