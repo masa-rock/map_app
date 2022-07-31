@@ -2,7 +2,9 @@
   <% @post.each do |post| %>
     <div class="map_items">
       <%= post.name %>
-      <%= post.tag_ids %>
+      <% post.tags.each do |tag| %>
+        <%= tag.name %>
+      <% end %>
     </div>
   <% end %>
   <%= link_to '新規登録', new_page_path %>

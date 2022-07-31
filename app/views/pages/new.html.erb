@@ -40,6 +40,8 @@
         <%= f.label "スポットについての情報" %><br />
         <%= f.text_area :description %>
       </div>
+      <span>タグ</span>
+      <%= react_component("TagName", {tag: Tag.all}) %>
       <div class="devise-button">
         <%= f.submit "スポットを追加する" %>
       </div>

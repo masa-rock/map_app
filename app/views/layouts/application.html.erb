@@ -8,12 +8,13 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': "reload" %>
-    <%# <%= javascript_pack_tag 'hello_react' %> %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <%= render "shared/header" %>
     <%= yield %>
-    <%= react_component("hello_react", {name: 'oo'}) %>
+      <%= react_component("hello_react", {name: 'oo'}) %>
+      <div id="root"></div>
   </body>
 </html>
